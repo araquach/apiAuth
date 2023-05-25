@@ -4,9 +4,9 @@ import (
 	"github.com/gorilla/mux"
 )
 
-var R mux.Router
+func AuthRouter() *mux.Router {
+	r := mux.NewRouter()
 
-func AuthRouter() {
-	authRoutes()
-	return
+	authRoutes(r)
+	return r
 }
